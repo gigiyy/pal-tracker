@@ -42,7 +42,7 @@ public class TimeEntryController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<TimeEntry> delete(@PathVariable("id") long timeEntryId) {
-        TimeEntry removed = repo.delete(timeEntryId);
+        repo.delete(timeEntryId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

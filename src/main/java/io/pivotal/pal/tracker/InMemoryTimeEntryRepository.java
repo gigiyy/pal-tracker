@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class InMemoryTimeEntryRepository implements TimeEntryRepository{
+public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     private Map<Long, TimeEntry> repo;
     private long nextId;
 
@@ -40,7 +40,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
         return origin;
     }
 
-    public TimeEntry delete(long timeEntryId) {
-        return repo.remove(timeEntryId);
+    public void delete(long timeEntryId) {
+        repo.remove(timeEntryId);
     }
 }
